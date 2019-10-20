@@ -39,4 +39,34 @@ for (i in peliculas) {
   div.append(p);
 }
 
+//Local Storage
+
+if (typeof (Storage) != 'undefined') {
+  console.log('The Local Storage is available');
+}else {
+  console.log('The Local Storage is unavailable');
+}
+
+// save datas in local storage
+localStorage.setItem('Key','Value');
+
+//get datas for the local Storage
+var ls = localStorage.getItem('Key');
+console.log(ls);
+
+// save objects in localStorage
+var user = {
+  username: 'lrecio',
+  email: 'lrecio@datys.cu'
+};
+
+localStorage.setItem('user',JSON.stringify(user));
+
+//get object the of localStorage
+var userjson = JSON.parse(localStorage.getItem('user'));
+console.log(userjson);
+
+
+
+
 });
